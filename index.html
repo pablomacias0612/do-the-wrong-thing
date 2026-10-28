@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101016">
+  <title>Do the Wrong Thing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span></div>
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">×</span> <span>THE DISOBEDIENCE EXPERIMENT</span></div>
+      <button class="sound" id="sound-toggle" type="button" aria-label="Mute sound" aria-pressed="false"><span id="sound-icon">♪</span><span id="sound-label">SOUND ON</span></button>
+    </header>
+
+    <main>
+      <section class="screen title-screen active" id="title-screen">
+        <div class="title-content">
+          <div class="edition"><span class="live-dot"></span> A LITTLE GAME ABOUT NOT LISTENING <span> / </span> VOL. 01</div>
+          <h1>DO THE<br><span>WRONG</span><br>THING<span class="period">.</span></h1>
+          <p class="subtitle">The rules are simple. <em>Don't follow them.</em></p>
+          <button class="primary start-button" id="start-button" type="button">START GAME <span aria-hidden="true">↗</span></button>
+          <p class="title-hint">Do exactly what you're <strong>NOT</strong> told to do.</p>
+        </div>
+        <div class="title-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-cross">×</div><div class="art-label">TRUST YOUR<br>OTHER INSTINCT.</div><div class="art-number">01 — 24</div></div>
+      </section>
+
+      <section class="screen intro-screen" id="intro-screen" aria-live="polite">
+        <div class="intro-inner"><div class="intro-number">RULE #1</div><h2>Never do what<br><span>you're told.</span></h2><p>Ready to be a little difficult?</p></div>
+      </section>
+
+      <section class="screen game-screen" id="game-screen">
+        <div class="game-shell">
+          <div class="game-meta"><div class="round-label">ROUND <span id="round-number">01</span><span class="round-total"> / 24</span></div><div class="stats"><div><span>SCORE</span><strong id="score">0</strong></div><div><span>STREAK</span><strong id="streak">0 <i>✦</i></strong></div></div></div>
+          <div class="timer-row"><span>TIME</span><div class="timer-track"><div class="timer-fill" id="timer-fill"></div></div><span id="time-text">5.0</span></div>
+          <div class="challenge" id="challenge">
+            <div class="instruction-label"><span class="live-dot"></span> YOUR INSTRUCTION</div>
+            <h2 id="instruction"></h2>
+            <p class="challenge-hint" id="challenge-hint">REMEMBER: DISOBEY.</p>
+            <div class="choices" id="choices"></div>
+          </div>
+          <div class="game-bottom"><span>THINK TWICE. ACT WRONG.</span><span id="progress-label">01 / 24</span></div>
+        </div>
+        <div class="feedback" id="feedback" aria-live="assertive"><div class="feedback-icon" id="feedback-icon"></div><div class="feedback-title" id="feedback-title"></div><div class="feedback-sub" id="feedback-sub"></div></div>
+      </section>
+
+      <section class="screen finale-screen" id="finale-screen" aria-live="polite"><div class="finale-copy" id="finale-copy">YOU LOSE<span>.</span></div></section>
+      <section class="screen end-screen" id="end-screen">
+        <div class="end-content"><div class="end-overline"><span class="live-dot"></span> EXPERIMENT COMPLETE</div><h2>YOU BEAT<br>THE GAME<span>.</span></h2><p>Turns out being wrong never felt so right.</p><div class="end-stats"><div><span>FINAL SCORE</span><strong id="final-score">0</strong></div><div><span>BEST STREAK</span><strong id="best-streak">0</strong></div></div><div class="end-actions"><button class="primary" id="play-again" type="button">PLAY AGAIN <span aria-hidden="true">↗</span></button><button class="secondary" id="rules-button" type="button">I FOLLOW RULES NOW</button></div></div>
+        <div class="end-seal" aria-hidden="true"><span>✓</span><small>OFFICIALLY<br>DISOBEDIENT</small></div>
+      </section>
+    </main>
+    <footer><span>MADE FOR THE QUESTIONABLY OBEDIENT</span><span>© THE WRONG THING</span></footer>
+  </div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+</body>
+</html>
